@@ -1,0 +1,39 @@
+@import '../../mixins';
+.app {
+	&__search {
+		grid-column:3 / -1;
+		display: flex;
+		align-items: center;
+		@include responsive(phone){
+			grid-column: 1 / -1;
+			grid-row: 2 / 3;
+		}
+		& > span {
+			height: 2.5rem;
+			width: 2.5rem;
+			margin-right: -2.8rem;
+			margin-top: 5px;
+		}
+	}
+	&__input {
+		display: inline-block;
+		width: 100%;
+		border:none;
+		outline: none;
+		padding: 1rem 2rem 1rem 3rem;
+		border-radius: 1rem;
+		font-size: 1.4rem;
+		color:#514205;
+		background-color: #EEE7FA; 
+		box-shadow: 1px 1px 2px rgba(0,0,0,.25);
+	}
+
+	&__icon {
+		position: relative;
+		z-index: 1000;
+		display: inline-block;
+		height:100%;
+		width: 100%;
+		fill:#514205; 
+	}
+}

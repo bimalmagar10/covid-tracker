@@ -1,0 +1,47 @@
+@import '../../mixins';
+.app {
+	&__btn {
+		&:link,&:visited {
+		 	border-radius:5px;
+		 	text-transform: uppercase;
+		 	padding: 1rem 1.5rem;
+		 	text-decoration: none;
+		 	text-align: center;
+		 	font-size:1.4rem;
+		 	display: block;
+		 	transition: all .4s ease;
+		}
+		&--primary {
+			background-color:#F6F8F8;
+			color: #8659DF;
+			&:hover {
+				background-color:#9B75E5;
+				color:#F6F8F8; 
+			}
+		}
+		&--secondary {
+			background-color:#9B75E5;
+			color:#F6F8F8;
+			&:hover {
+				background-color:#F6F8F8;
+				color:#8659DF; 
+			}
+		}
+		&--tertiary {
+			cursor: pointer;
+			font-size: 1rem;
+			background-color: #8659DF;
+			color:#F6F8F8;
+			outline: none;
+			padding:.5rem 1rem;
+			border: none;
+			border-radius: 5px;
+			transition: all .4s ease;
+			&:hover {
+				background-color: #F6F8F8;
+				color:#8659DF;
+			}
+		}
+		
+	}
+}

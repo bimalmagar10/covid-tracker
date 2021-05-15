@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import '../../mixins';
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 68.75%;
+	@include responsive(tablet){font-size: 62.5%;}
+}
+body {
+	box-sizing: inherit;
+	font-family:'Poppins',sans-serif;
+	color: #EEE7FA;
+}
+
+
+//MAIN CONTAINER
+.container {
+	height: 100vh;
+	background-image:linear-gradient(to right,rgba(#8659DF,1),rgba(#8C5EE7,.88));
+	background-repeat: no-repeat;
+	background-size:cover;
+	position: relative;
+	@include responsive(phone){
+		padding: 20rem 0;
+		height: 100%;
+	}
+}
+
+//APP SECTION
+.app {
+	background-color:#9B75E5;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 4rem 4.5em;
+	box-shadow: 1px 1px 2px rgba(#000,.25);
+	border-radius:2rem;
+	display: grid;
+	grid-template-columns: repeat(2,1fr) .8fr 2fr;
+	grid-row-gap: 3rem;
+	grid-column-gap: 2rem;
+	@include responsive(tablet){padding: 4rem;}
+	@include responsive(phone){
+		min-width: 30rem;
+	}
+	@include responsive(xs-phone){
+		min-width: 20rem;
+	}
+}
+.error {
+	position: absolute;
+	top: 21%;
+	left:51%;
+	display: block;
+	color: #d10000;
+	font-size: 1.1rem;
+	@include responsive(phone){
+		top: 17%;
+		left: 10%;
+	}
+}
+

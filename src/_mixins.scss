@@ -1,0 +1,31 @@
+@mixin colorSelect($bg-color,$color){
+	background-color: $bg-color;
+	& > * {
+		color: $color;
+	}
+}
+@mixin responsive($break-point){
+	@if $break-point == tablet {
+		@media only screen and (max-width:52.875em){@content;}
+	}
+	@if $break-point == phone {
+		@media only screen and (max-width:44.625em){@content;}
+	}
+	@if $break-point == xs-phone {
+		@media only screen and (max-width:26.5625em){@content;}
+	}
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+#root {
+	@include responsive(phone){
+		height: 100vh;
+	}
+	
+}

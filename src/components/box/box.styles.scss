@@ -1,0 +1,89 @@
+@import '../../mixins';
+.app {
+	&__box {
+		border-radius: 1rem;
+		padding: .8rem 1.5rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		&-confirmed {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+			@include colorSelect(#ECAFA9,#CE3D2E);
+			@include responsive(phone){
+				grid-column: 1 / -1;
+				grid-row: 3 / 4;
+			}
+		}
+		&-recovered {
+			grid-column: 2 / 3;
+			grid-row:2 / 3;
+			@include colorSelect(#C1F1D5,#27AE60);
+			@include responsive(phone){
+				grid-column: 1 / -1;
+				grid-row: 4 / 5;
+			}
+		}
+		&-active {
+			grid-column: 1 / 2;
+			grid-row: 3 / 4;
+			@include colorSelect(#D3E9F7,#217DBB);
+			@include responsive(phone){
+				grid-column: 1 / -1;
+				grid-row: 5 / 6;
+			}
+		}
+		&-death {
+			grid-column: 2 / 3;
+			grid-row: 3 / 4;
+			@include colorSelect(#DFE4E4,#697C7D);
+			@include responsive(phone){
+				grid-column: 1 / -1;
+				grid-row: 6 / 7;
+			}
+		}
+		&-new {
+			grid-column: 3 / 4;
+			grid-row: 2 / 4;
+			@include colorSelect(#FBEFBF,#514205);
+			@include responsive(phone){
+				grid-column: 1 / -1;
+				grid-row: 7 / 8;
+			}
+		}
+	}
+	&__case-type {
+		font-size: 1.2rem;
+		display: inline-block;
+		text-align: center;
+	}
+	&__count {
+		font-size: 1.8rem;
+		font-weight: 600;
+	}
+}
+.reverse {
+	padding:1rem; 
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	@include responsive(phone){
+		display: flex;
+		flex-direction: column;
+	}
+	& h2 {
+		font-size: 1.8rem;
+	}
+	& span {
+		font-size: 2.5rem;
+		font-weight: 600;
+	}
+	&__child {
+		writing-mode: vertical-rl;
+		transform: rotate(180deg);
+		@include responsive(phone){
+			writing-mode: horizontal-tb;
+			transform: rotate(0);
+		}
+	}
+}

@@ -1,0 +1,25 @@
+@import '../../mixins';
+.app {
+	&__card {
+		background-color:#9B75E5;
+		padding: 1rem; 
+		border-radius: 1rem;
+		animation: fadeIn 1s forwards ease-out;
+
+	}
+	&__lists {
+		font-size: 1.2rem;
+		max-height: 17rem;
+		hyphens: auto;
+		margin-top: 1rem;
+		list-style-position: inside;
+		list-style-type: "\2714";
+		overflow: auto;
+		&::-webkit-scrollbar {
+			width: 2px;
+		}
+		&::-webkit-scrollbar-thumb {
+  			background:#8659DF;
+		}
+	}
+}

@@ -27,7 +27,7 @@ body {
 	background-size:cover;
 	position: relative;
 	@include responsive(phone){
-		padding: 20rem 0;
+		padding: 30rem 0;
 		height: 100%;
 	}
 }
